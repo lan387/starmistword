@@ -2052,15 +2052,7 @@
             initSpeech();
         }, 1000);
         
-        const guideShown = localStorage.getItem(GUIDE_KEY);
-        if (!guideShown) {
-            setTimeout(() => {
-                showGuideModal();
-            }, 500);
-        }
-    }
-
-    init();
+ 
     // 显示指南弹窗（如果未显示过）
     const guideShown = localStorage.getItem(GUIDE_KEY);
     if (!guideShown) {
