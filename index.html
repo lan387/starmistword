@@ -1112,7 +1112,7 @@
     }
 
     // ==================== 用户指南 ====================
-    function showGuideModal() {
+       function showGuideModal() {
         const modal = document.createElement('div');
         modal.className = 'guide-modal';
         modal.innerHTML = `
@@ -1122,18 +1122,51 @@
                     <div class="guide-section-title">项目简介</div>
                     <div class="guide-section-text">交互式英语单词学习工具，支持随机抽词、自测答题、错题整理。词库可自定义导入，数据自动保存在浏览器本地，学习进度自动恢复。</div>
                 </div>
+                
                 <div class="guide-section">
                     <div class="guide-section-title">词库管理</div>
-                    <div class="guide-section-text">• 点击「用户测试单词」加载内置词库<br>• 使用「添加新词库」导入自己的单词<br>• 支持简单格式、JSON、竖线三种格式<br>• 每个词包显示单词数量</div>
+                    <div class="guide-section-text">• 点击「用户测试单词」加载内置词库<br>• 使用「添加新词库」导入自己的单词<br>• 支持简单格式、JSON、竖线三种格式<br>• 每个词包显示单词数量<br>• 内置「用户测试单词」删除后会自动重建</div>
                 </div>
+                
                 <div class="guide-section">
                     <div class="guide-section-title">学习模式</div>
-                    <div class="guide-section-text">1. 点击「随机单词」或按空格键抽取单词<br>2. 查看单词和例句，思考释义<br>3. 按「R键」或点击「显示释义」查看答案<br>4. 按「C键」或「W键」自测<br>5. 一轮学完后会弹出完成提示</div>
+                    <div class="guide-section-text">1. 点击「随机单词」或按空格键抽取单词<br>2. 查看单词和例句，思考释义<br>3. 按「R键」或点击「显示释义」查看答案<br>4. 按「C键」或「W键」自测：答对得星星动画，答错自动加入错题本<br>5. 一轮学完后会弹出完成提示，自动开始新一轮<br>6. 中途退出会自动保存进度，下次打开继续学习</div>
                 </div>
+                
+                <div class="guide-section">
+                    <div class="guide-section-title">学习进度</div>
+                    <div class="guide-section-text">单词卡片右上角实时显示当前轮次进度（已学 / 总数）。关闭页面或刷新后，进度会自动恢复。</div>
+                </div>
+                
+                <div class="guide-section">
+                    <div class="guide-section-title">错题本</div>
+                    <div class="guide-section-text">• 答错的单词自动收集<br>• 可查看、删除、清空错题<br>• 支持「导出至我的词库」转为学习词库<br>• 支持「开始练习」专项复习错题</div>
+                </div>
+                
+                <div class="guide-section">
+                    <div class="guide-section-title">发音功能</div>
+                    <div class="guide-section-text">点击「英式发音」或「美式发音」按钮，或按 P/O 键播放发音，点击单词也可播放美式发音。</div>
+                </div>
+                
                 <div class="guide-shortcuts">
                     <p>快捷键</p>
-                    <p><span>空格</span> 随机单词 &nbsp;|&nbsp; <span>R</span> 显示释义 &nbsp;|&nbsp; <span>C</span> 答对 &nbsp;|&nbsp; <span>W</span> 答错</p>
-                    <p><span>P</span> 美式发音 &nbsp;|&nbsp; <span>O</span> 英式发音 &nbsp;|&nbsp; <span>B</span> 错题本</p>
+                    <p><span>空格</span> 随机单词 &nbsp;|&nbsp; <span>R</span> 显示/隐藏释义 &nbsp;|&nbsp; <span>C</span> 答对 &nbsp;|&nbsp; <span>W</span> 答错</p>
+                    <p><span>P</span> 美式发音 &nbsp;|&nbsp; <span>O</span> 英式发音 &nbsp;|&nbsp; <span>B</span> 错题本 &nbsp;|&nbsp; <span>D</span> 清空词库</p>
+                </div>
+                
+                <div class="guide-section">
+                    <div class="guide-section-title">深色模式</div>
+                    <div class="guide-section-text">点击右上角按钮可切换亮色/深色主题，自动保存您的偏好设置。</div>
+                </div>
+                
+                <div class="guide-section">
+                    <div class="guide-section-title">数据持久化</div>
+                    <div class="guide-section-text">所有词库、错题本、学习记录、深色模式偏好均自动保存在浏览器本地，刷新或关闭页面不会丢失。</div>
+                </div>
+                
+                <div class="guide-section">
+                    <div class="guide-section-title">版权声明</div>
+                    <div class="guide-section-text">本工具仅供个人学习使用，禁止用于商业目的。© 2026 单词本 | 联系方式：3410069859@qq.com</div>
                 </div>
             </div>
             <div class="guide-checkbox">
